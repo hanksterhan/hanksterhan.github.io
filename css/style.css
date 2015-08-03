@@ -1,5 +1,12 @@
-html {
-  background-image: url("C:\Users\Amy\Documents\Hangsta\HTML\github\hanksterhan.github.io\escheresque_ste.png");
-  background-repeat: repeat-x;
+body {
+  background: #FFFFFF url("escheresque_ste.png") repeat;
 
+}
+h1 {
+  color: red;
+}
+.menu > li {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
 }
