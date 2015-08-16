@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Hanksterhan </title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Hanksterhan </title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
   <body>
-    <div id="header">
-      <h1> Mrs. Casey </h1>
-        <ul class="menu">
-              <li><a href="#">Homework</a></li>
-              <li><a href="#">Calendar</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Book Group</a></li>
-              <li><a href="#">Philosophy Circle</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Resources <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Sample Essays</a></li>
-                  <li><a href="#">Sample Multiple Choice</a></li>
-                  <li><a href="#">Recommended Books</a></li>
-                  <li><a href="#">Powerpoints</a></li>
-                  <li><a href="#">Helpful Sites</a></li>
-                  <li><a href="#">How to get a 5</a></li>
-                  <li><a href="#">About Me</a></li>
-                </ul>
-              </li>
-            </ul>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+               <a href="http://google.com" class="navbar-brand">Hankster's Site</a>
+
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+
+               <div class="collapse navbar-collapse navHeaderCollapse">
+
+                 <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                    </li>
+                    <li><a href="#">Homework</a></li>
+                    <li><a href="#">Philosophy Circle</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                 </ul>
+
+               </div>
+
+            </div>
         </div>
-        <h1> I can say anything about Kevin here </h1>
-        <script src="js/jquery-1.11.3.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
   </body>
 
 

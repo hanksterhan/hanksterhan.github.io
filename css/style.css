@@ -2,24 +2,3 @@ body {
   background: #FFFFFF url("escheresque_ste.png") repeat;
 
 }
-h1 {
-  color: red;
-
-}
-.menu > li {
-  display: inline-block;
-  padding: 20px;
-  border-radius: 100px;
-  background-color: #000;
-  color: #FFF;
-  text-decoration: none;
-}
-
-#header {
-  height: 60px;
-  background-color: #101010;
-  position: relative;
-  float: top;
-  width: 100%;
-  display: inline-block;
-}
