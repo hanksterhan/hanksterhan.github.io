@@ -1,7 +1,16 @@
 body {
-  background: #FFFFFF url("escheresque_ste.png") repeat;
-
+  background: #000000 url("img/escheresque_ste.png") repeat;
+  /*trying to get the background image back*/
 }
 .col-md-3{
   color:#FFF;
+}
+.page-header {
+  margin-top:0;
+}
+.panel-body {
+  padding-top: 0;
+}
+.featuredImg {
+  margin-bottom: 15px;
 }
