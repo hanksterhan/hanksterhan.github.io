@@ -1,6 +1,5 @@
 body {
-  background: #000000 url("img/escheresque_ste.png") repeat;
-  /*trying to get the background image back*/
+
 }
 .col-md-3{
   color:#FFF;
@@ -13,4 +12,8 @@ body {
 }
 .featuredImg {
   margin-bottom: 15px;
+}
+
+.col-lg-2 {
+  background-color:#FFF;
 }
