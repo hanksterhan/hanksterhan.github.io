@@ -19,3 +19,9 @@ body {
 .col-lg-2 {
   background-color:#FFF;
 }
+
+.carousel-inner > .item > img{
+  margin:auto;
+  width: 1200px;
+  height:900px;
+}
