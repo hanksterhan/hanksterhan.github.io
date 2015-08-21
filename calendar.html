@@ -6,9 +6,15 @@
         <title> Hanksterhan </title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script src="js/jquery.js"></script>
+        <script src="js/responsive-calendar.js"></script>
+
+        <link href="css/responsive-calendar.css" rel="stylesheet" media="screen">
   </head>
 
   <body>
+
         <!--Fixed Header bar that has the menu-->
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -49,58 +55,71 @@
             </div>
         </div>
 
-        <!--JumboTron-->
-        <div>
-          <div class="container">
-            <div class="jumbotron">
-              <center><h1> Hello, World!</h1>
-              <p> I am still learning how to make websites, so bear with me and watch this website grow and become more functional!! </p>
-              <a class="btn btn-info">Click me!</a>
-              <a class="btn btn-danger">Click me too!</a></center>
+        <!-- Responsive calendar - START -->
+        <div class="responsive-calendar" style="background-color:#FFF">
+          <div class="controls">
+              <a class="pull-left" data-go="prev"><div class="btn"><i class="icon-chevron-left"></i></div></a>
+              <h4><span data-head-year></span>August 2015<span data-head-month></span></h4>
+              <a class="pull-right" data-go="next"><div class="btn"><i class="icon-chevron-right"></i></div></a>
+          </div><hr/>
+          <div class="day-headers">
+            <div class="day header">Mon</div>
+            <div class="day header">Tue</div>
+            <div class="day header">Wed</div>
+            <div class="day header">Thu</div>
+            <div class="day header">Fri</div>
+            <div class="day header">Sat</div>
+            <div class="day header">Sun</div>
+          </div>
+          <div class="days" data-group="days">
+            <div class="days" data-group="days">
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0s;" class="day mon past not-current"><a data-year="2014" data-month="3" data-day="31">31</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.01s;" class="day tue past"><a data-year="2014" data-month="4" data-day="1">1</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.02s;" class="day wed past"><a data-year="2014" data-month="4" data-day="2">2</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.03s;" class="day thu past"><a data-year="2014" data-month="4" data-day="3">3</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.04s;" class="day fri past"><a data-year="2014" data-month="4" data-day="4">4</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.05s;" class="day sat past"><a data-year="2014" data-month="4" data-day="5">5</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.06s;" class="day sun past"><a data-year="2014" data-month="4" data-day="6">6</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.07s;" class="day mon past"><a data-year="2014" data-month="4" data-day="7">7</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.08s;" class="day tue past"><a data-year="2014" data-month="4" data-day="8">8</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.09s;" class="day wed past"><a data-year="2014" data-month="4" data-day="9">9</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.1s;" class="day thu past"><a data-year="2014" data-month="4" data-day="10">10</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.11s;" class="day fri past"><a data-year="2014" data-month="4" data-day="11">11</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.12s;" class="day sat past"><a data-year="2014" data-month="4" data-day="12">12</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.13s;" class="day sun past"><a data-year="2014" data-month="4" data-day="13">13</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.14s;" class="day mon past"><a data-year="2014" data-month="4" data-day="14">14</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.15s;" class="day tue past"><a data-year="2014" data-month="4" data-day="15">15</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.16s;" class="day wed past"><a data-year="2014" data-month="4" data-day="16">16</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.17s;" class="day thu past"><a data-year="2014" data-month="4" data-day="17">17</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.18s;" class="day fri past"><a data-year="2014" data-month="4" data-day="18">18</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.19s;" class="day sat past"><a data-year="2014" data-month="4" data-day="19">19</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.2s;" class="day sun past"><a data-year="2014" data-month="4" data-day="20">20</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.21s;" class="day mon past"><a data-year="2014" data-month="4" data-day="21">21</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.22s;" class="day tue past"><a data-year="2014" data-month="4" data-day="22">22</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.23s;" class="day wed past"><a data-year="2014" data-month="4" data-day="23">23</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.24s;" class="day thu past"><a data-year="2014" data-month="4" data-day="24">24</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.25s;" class="day fri past"><a data-year="2014" data-month="4" data-day="25">25</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.26s;" class="day sat past active"><a href="http://w3widgets.com" data-year="2014" data-month="4" data-day="26">26</a><span class="badge badge-warning">1</span></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.27s;" class="day sun past"><a data-year="2014" data-month="4" data-day="27">27</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.28s;" class="day mon past"><a data-year="2014" data-month="4" data-day="28">28</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.29s;" class="day tue past"><a data-year="2014" data-month="4" data-day="29">29</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.3s;" class="day wed past active"><a href="http://w3widgets.com/responsive-slider" data-year="2014" data-month="4" data-day="30">30</a><span class="badge badge-warning">5</span></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.31s;" class="day thu past not-current"><a data-year="2014" data-month="5" data-day="1">1</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.32s;" class="day fri past not-current"><a data-year="2014" data-month="5" data-day="2">2</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.33s;" class="day sat past not-current"><a data-year="2014" data-month="5" data-day="3">3</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.34s;" class="day sun past not-current"><a data-year="2014" data-month="5" data-day="4">4</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.35s;" class="day mon past not-current"><a data-year="2014" data-month="5" data-day="5">5</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.36s;" class="day tue past not-current"><a data-year="2014" data-month="5" data-day="6">6</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.37s;" class="day wed past not-current"><a data-year="2014" data-month="5" data-day="7">7</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.38s;" class="day thu past not-current"><a data-year="2014" data-month="5" data-day="8">8</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.39s;" class="day fri past not-current"><a data-year="2014" data-month="5" data-day="9">9</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.4s;" class="day sat past not-current"><a data-year="2014" data-month="5" data-day="10">10</a></div>
+              <div style="transform: rotateY(0deg); backface-visibility: hidden; transition: -moz-transform 0.5s ease 0.41s;" class="day sun past not-current"><a data-year="2014" data-month="5" data-day="11">11</a></div>
             </div>
           </div>
         </div>
+        <!-- Responsive calendar - END -->
 
-
-        <!--Responsive Grid System -->
-          <div>
-            <div class="container">
-              <div class="row">
-
-                <div class="col-md-3">
-                  <h3>August 3</h3>
-                  <p>Finished 8 tutorials on Code Academy to this date: "html/css", "javascript", "jquery", "how to build websites", "advanced websites", and "interactive websites"</p>
-                  <a href="#" class="btn btn-default">Read More</a>
-                </div>
-
-                <div class="col-md-3">
-                  <h3> August 7</h3>
-                  <p>Working in the air right now, which means that I am trying to code html without the help of the internet. I'm finding this pretty difficult because I'm only vaguely familiar with the html languages, I'm not anywhere close to being proficient yet... </p>
-                  <a href="#" class="btn btn-default">Read More</a>
-                </div>
-
-                <div class="col-md-3">
-                  <h3> August 15</h3>
-                  <p> I found an extremely useful tutorial on YouTube by Coder's Guide. I am finally able to incorporate BootStrap into my html document. My website is about to take off as I get more and more experience with useful, applicable coding applications. </p>
-                  <a href="#" class="btn btn-default">Read More</a>
-                </div>
-
-                <div class="col-md-3">
-                  <h3> August 26</h3>
-                  <p> School starts on this day, hopefully I can finish creating a website by then. - HH</p>
-                  <a href="#" class="btn btn-default">Read More</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        <!--Fixed Navigation bar on the bottom of the site-->
-        <div class="navbar navbar-default navbar-fixed-bottom">
-          <div class="container">
-              <p class="navbar-text pull-left"> Site Built by Hank </p>
-              <a href="#" class="navbar-btn btn-success btn pull-right"> Contact Hank</a>
-          </div>
-        </div>
 
         <!--modal-->
         <div class="modal fade" id="contact" role="dialog">
@@ -144,6 +163,19 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/bootstrap.js"></script>
+
+        <script>
+        $( document ).ready( function() {
+          $('.responsive-calendar').responsiveCalendar({
+    time: '2013-05',
+    events: {
+      "2013-04-30": {"number": 5, "badgeClass": "badge-warning", "url": "http://w3widgets.com/responsive-calendar"},
+      "2013-04-26": {"number": 1, "badgeClass": "badge-warning", "url": "http://w3widgets.com"},
+      "2013-05-03": {"number": 1, "badgeClass": "badge-error"},
+      "2013-06-12": {}}
+  });
+        });
+        </script>
   </body>
 
 
