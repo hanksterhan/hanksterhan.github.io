@@ -25,3 +25,9 @@ body {
   width: 1000px;
   height:750px;
 }*/
+.apchemSheet {
+  color: #FFF;
+}
+.apchemSheet p {
+  font-size: 20px;
+}
