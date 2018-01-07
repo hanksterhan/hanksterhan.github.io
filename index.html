@@ -48,6 +48,7 @@
 								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
 								<li><a href="#fakebananas" id="fakebananas-link" class="skel-layers-ignoreHref"><span>Fake Bananas</span></a></li>
 								<li><a href="#nbascraper" id="nbascraper-link" class="skel-layers-ignoreHref"><span>NBA Statistics Scraper</span></a></li>
+								<li><a href="#featureimportance" id="featureimportance-link" class="skel-layers-ignoreHref"><span>Feature Importance Analysis</span></a></li>
 								<li><a href="#latenite" id="latenite-link" class="skel-layers-ignoreHref"><span>Late Nite</span></a></li>
 								<li><a href="#reikiOM" id="reikiom-link" class="skel-layers-ignoreHref"><span>Reiki OM</span></a></li>
 								<li><a href="#photography" id="photography-link" class="skel-layers-ignoreHref"><span>Photography</span></a></li>
@@ -65,11 +66,11 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="https://twitter.com/hankster_han" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://facebook.com/hanksterhan" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="https://instagram.com/hanksterhan/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/hanksterhan" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://linkedin.com/in/henryshan/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a target="_blank" href="https://twitter.com/hankster_han" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a target="_blank" href="https://facebook.com/hanksterhan" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a target="_blank" href="https://instagram.com/hanksterhan/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a target="_blank" href="https://github.com/hanksterhan" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a target="_blank" href="https://linkedin.com/in/henryshan/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 						</ul>
 
 				</div>
@@ -91,7 +92,7 @@
 								<br />
 								<br />
 								<br />
-								<a href="#portfolio" class="button scrolly">Hi! I'm Henry </a>
+								<br />
 							</footer>
 
 						</div>
@@ -100,6 +101,7 @@
 					<div class="container">
 						<br />
 						<center>
+							<h2 class="major"><strong>Hi! I'm Henry</strong></h2>
 							<p><strong>Swarthmore College &nbsp;&bull;&nbsp; Sushi Chef &nbsp;&bull;&nbsp;
 								 PNW &nbsp;&bull;&nbsp; Musician &nbsp;&bull;&nbsp; Data Scientist</strong></p>
 						</center>
@@ -117,15 +119,21 @@
 								<div class="12u 12u$(mobile)">
 									<article class="item" id="fakebananas">
 										<header>
-											<a href="https://github.com/likeaj6/FakeBananas"><h2 class='major'><strong>Fake Bananas</strong></h2></a>
+											<a target="_blank" href="https://github.com/likeaj6/FakeBananas"><h2 class='major'><strong>Fake Bananas</strong></h2></a>
 											<img src="images/banana.png" alt="bananas"/>
 											<p>
-												<a href="https://github.com/likeaj6/FakeBananas"><strong>Fake Bananas</strong></a> is a fake news detector web app based on stance detection, natural language processing and machine learning.
+												<a target="_blank" href="https://github.com/likeaj6/FakeBananas"><strong>Fake Bananas</strong></a> is a fake news detector web app based on stance detection, natural language processing and machine learning.
 												At HackMIT 2017, Fake Bananas finished in the top 10 teams out of over 400 teams and 1250 hackers. Fake Bananas also
 												won Best AI/Hack for Social Good from Baidu and the prize for the Most Interesting Use of Data from Hudson River Trading. <br /><br />
 												Our fake news detection is based on the concept of <strong><i>stance detection.</i></strong> Fake news is tough to identify. Many 'facts' are
 												highly complex and difficult to check, or exist on a 'continuum of truth' or are compound sentences with act and fiction overlapping. The best way to
 												attack this problem is not through fact checking, but by comparing how reputable sources feel about a claim.
+											</p>
+											<img class="image fit" src="images/fakebananas.png"  />
+											<p>
+												How FakeBananas works:
+											</p>
+											<p>
 												<ol>
 													<li>
 														1. Users input a claim like <i>"The Afghanistan war was bad for the world"</i>
@@ -134,24 +142,30 @@
 														2. Our program will search the thousands of global and local news sources for their 'stance' on that topic.
 													</li>
 													<li>
-														3. We run sources through our Reputability Algorithm. If lots of reputable sources all agree with your claim, then it's probably true!
+														3. We run sources through our Reputability Algorithm. If lots of reputable sources all agree with your claim, then it's probably true.
 													</li>
 													<li>
 														4. Then we cite our sources so our users can click through and read more about that topic!
 													</li>
 												</ol>
+												I was primarily in charge of web scraping for articles. Given a user URL or claim, I used Microsoft's Azure Cognitive and IBM's Natural Language Processing
+												to parse the article or claim and perform keyword extraction. I then used combinations of the keywords to collect up to a few thousand articles
+												from Event Registry's database to pass on to the machine learning model. Here I aired on the side of collecting more rather than fewer articles
+												because the machine learning will accurately determine relevancy further in the pipeline. <br />
+											</p>
+											<p>
 												Moving forward, we hope to launch a public facing web application and potentially even a browser plug-in that can detect
 												news articles and display what our pipeline returns.
 											</p>
-											<a href="https://github.com/likeaj6/FakeBananas"><strong> -- Link to Github -- </strong></a>
+											<a target="_blank" href="https://github.com/likeaj6/FakeBananas"><strong> -- Link to Github -- </strong></a>
 										</header>
 									</article>
 
 
 									<article class="item" id="nbascraper">
 										<header>
-											<a href='https://github.com/hanksterhan/NBA-Statistics-Scraper'><h2 class="major"><strong>NBA Statistics Scraper</strong></h2></a>
-											<p>I built a <a href='https://github.com/hanksterhan/NBA-Statistics-Scraper'>web scraper</a> that gathered statistical information from every active player in the NBA in the
+											<a target="_blank" href='https://github.com/hanksterhan/NBA-Statistics-Scraper'><h2 class="major"><strong>NBA Statistics Scraper</strong></h2></a>
+											<p>I built a <a target="_blank" href='https://github.com/hanksterhan/NBA-Statistics-Scraper'>web scraper</a> that gathered statistical information from every active player in the NBA in the
 												2016-2017 season, as well as offensive and defensive team stats for each team.
 												The data was pulled, cleaned, and displayed using a combination of the python libraries Numpy, Pandas, Bokeh, and BeautifulSoup.
 												Hover over the graph to see some statistic.	The legend in the bottom right is also interactive, click on a position to try it out!</p>
@@ -162,7 +176,38 @@
 												Moving forward, I would like to analyze the data that I compiled and create a machine learning model that can predict roughly how well a player is going to do
 												based on recent performances, offensive/defensive team metrics, and other statistics.
 											</p>
-											<a href='https://github.com/hanksterhan/NBA-Statistics-Scraper'><strong> -- Link to Github -- </strong></a>
+											<a target="_blank" href='https://github.com/hanksterhan/NBA-Statistics-Scraper'><strong> -- Link to Github -- </strong></a>
+										</header>
+									</article>
+
+									<article class="item" id="featureimportance">
+										<header>
+											<h2 class="major"><strong>Analysis of Feature Selection Across Different Machine Learning Algorithms</strong></h2>
+											<p>
+												For my machine learning class, my partner and I chose to do an analysis on how different machine learning algorithms handle feature selection and dimensionality reduction
+												implicitly or explictly. We chose 4 machine learning models: support vector machines, Bayesian networks, and logistic regression with L1 and L2 norms. We compared the results to
+												existing preprocessing techniques that are used for dimensionality reduction - Principle Component Analysis and Linear Discriminant Analysis. The linear transformation using PCA
+												is shown below.
+											</p>
+											<img src="images/education_PCA.png" class="image fit"/>
+											<p>
+												Abstract
+											</p>
+											<p>
+												Feature importance and dimensionality reduction are important for effectively visualizing and interpreting real-world datasets,
+												as well as improving prediction accuracy. Using the <a target="_blank" href="https://www.kaggle.com/aljarah/xAPI-Edu-Data">Students Academic Performance Dataset from Kaggle</a>,
+												we implemented support vector machines, Bayesian networks, and logistic regression with L1 and L2 norms. These algorithms with various hyperparamets were implemented
+												to determine feature importance and predictive power of the models. These results were then compared to the important features determined from the preprocessing techniques:
+												Principle Component Anaylsis (PCA) and Linear Discriminant Analysis (LDA). Using R<sup>2</sup> values, which explain the percentage of the response variable explained by the
+												variation in the model, it was found that L1 regularized logistic regression and Bayesian networks best fit the data. The higher R<sup>2</sup> values identify that these algorithms
+												had the most predictive power, allowing them to identify the ost important features in the dataset. SVM, LDA and L2 regularized logistic regression least accurately fit the data with
+												SVM having the next highest R<sup>2</sup> value and L1 having the lowerst. The important features between Bayesian networks, PCA, and LDA were compared, while the irrelevant features
+												determined by SVM and L1/L2 logistic regression were also evaluated.
+											</p>
+											<p>
+												Moving forward, I would like to do more analysis in the sci-kit learn library feature_selection. I would also like to use multiple datasets and have more baselines to compare results to.
+											</p>
+											<a target="_blank" href="hhan3-aclark2.pdf">-- Link to paper --</a>
 										</header>
 									</article>
 
@@ -189,7 +234,7 @@
 									</article>
 
 									<article class="item" id="photography">
-										<a href="http://vsco.co/hanksterhan/" class="image fit"><img src="images/tina_big_sur.jpg" alt="" /></a>
+										<a target="_blank" href="http://vsco.co/hanksterhan/" class="image fit"><img src="images/tina_big_sur.jpg" alt="" /></a>
 										<header>
 											<h2 class="major">Traveling and Photography</h2>
 											<p>
@@ -198,7 +243,7 @@
 											<p>
 												I'm also getting into photography - check out my <a href="http://vsco.co/hanksterhan/">VSCO</a> to get a glimpse at what I've been up to!
 											</p>
-											<a href='http://vsco.co/hanksterhan/'><strong> -- Link to VSCO -- </strong></a>
+											<a target="_blank" href='http://vsco.co/hanksterhan/'><strong> -- Link to VSCO -- </strong></a>
 										</header>
 									</article>
 								</div>
@@ -210,14 +255,14 @@
 											<h2 class="major">Late Nite Swarthmore</h2>
 											<p>
 												Within 2 months of starting my freshmen year of college at Swarthmore College, I started a food delivery service
-												that tackled the shortage of late night grub options on campus. Check out the menu <a href="https://orderfromlatenite.github.io">here</a>
+												that tackled the shortage of late night grub options on campus. Check out the menu <a target="_blank" href="https://orderfromlatenite.github.io">here</a>
 											</p>
 											<p>
 												Scouted.io included me in their List of Top 5 Scouted Student Entrepreneurs:
-												<a href="http://blog.scouted.io/2017/06/20/top-5-scouted-student-entrepreneurs/"> -- Scouted.io Blog --</a>
+												<a target="_blank" href="http://blog.scouted.io/2017/06/20/top-5-scouted-student-entrepreneurs/"> -- Scouted.io Blog --</a>
 											</p>
 											<p>
-												Swarthmore College interviewed me for the article <a href="http://bulletin.swarthmore.edu/summer-2017-issue-iv-volume-cxiv/fish-tales#Han">"24 Ways to Look at a Fish"</a>
+												Swarthmore College interviewed me for the article <a target="_blank" href="http://bulletin.swarthmore.edu/summer-2017-issue-iv-volume-cxiv/fish-tales#Han">"24 Ways to Look at a Fish"</a>
 											</p>
 										</header>
 									</article>
@@ -235,7 +280,7 @@
 
 												<br /><br />
 												Coming soon!<br />
-												<a href="https://github.com/hanksterhan/DJai"> -- Link to Github --</a>
+												<a target="_blank" href="https://github.com/hanksterhan/DJai"> -- Link to Github --</a>
 											</p>
 										</header>
 									</article>
