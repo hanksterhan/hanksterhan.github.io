@@ -8,10 +8,11 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<meta property="og:url" content="hanksterhan.github.io" />
+		<meta property="og:url" content="https://henryshan.com" />
 		<meta property="og:title" content="Henry Han" />
 		<meta property="og:type" content="website" />
 		<meta property="og:description" content="Computer Science and Statistics student at Swarthmore College." />
+		<meta name="description" content="Computer Science and Cognitive Science major at Swarthmore College." />
 		<meta property="og:image" content="images/penn_landing.jpg" />
 	</head>
 	<body>
@@ -48,8 +49,11 @@
 								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
 								<li><a href="#fakebananas" id="fakebananas-link" class="skel-layers-ignoreHref"><span>Fake Bananas</span></a></li>
 								<li><a href="#nbascraper" id="nbascraper-link" class="skel-layers-ignoreHref"><span>NBA Statistics Scraper</span></a></li>
+								<li><a href="#nbashotchart" id="nbashotchart-link" class="skel-layers-ignoreHref"><span>NBA Shot Chart</span></a></li>
 								<li><a href="#featureimportance" id="featureimportance-link" class="skel-layers-ignoreHref"><span>Feature Importance Analysis</span></a></li>
+								<li><a href="#superpixels" id="superpixels-link" class="skel-layers-ignoreHref"><span>Superpixels!</span></a></li>
 								<li><a href="#potassium" id="potassium-link" class="skel-layers-ignoreHref"><span>Importance of Potassium</span></a></li>
+								<li><a href="#paces" id="paces-link" class="skel-layers-ignoreHref"><span>Paces Cafe</span></a></li>
 								<li><a href="#latenite" id="latenite-link" class="skel-layers-ignoreHref"><span>Late Nite</span></a></li>
 								<li><a href="#reikiOM" id="reikiom-link" class="skel-layers-ignoreHref"><span>Reiki OM</span></a></li>
 								<li><a href="#photography" id="photography-link" class="skel-layers-ignoreHref"><span>Photography</span></a></li>
@@ -181,6 +185,27 @@
 										</header>
 									</article>
 
+									<article class="item" id="nbashotchart">
+										<header>
+											<a target="_blank" href='https://github.com/hanksterhan/NBAShotChartApp'><h2 class="major"><strong>NBA Shot Chart ShinyR App</strong></h2></a>
+											<p>
+												For my data science class, my partner, Alex Mandel, and I created this <a target="_blank" href="https://github.com/hanksterhan/NBAShotChartApp">project</a> to explore how NBA players shot charts.
+												We were interested in seeing how well the top 25 NBA players perform. We look at different areas of the court and can see where they made the shot from and in different quarters or for an entire season.
+												We downloaded and cropped our court images from Sports Illustrated . We downloaded our player data from NBA Savant and downloaded the NBA schedule from Kaggle .
+												Finally, we scraped the NBA abbreviations from Wikipedia which helped us match a lot of our data. The app is hosted <a target="_blank" href = "http://shiny.swarthmore.edu:3838/hhan3/NBAShotChartApp/">here.</a>
+											</p>
+
+											<iframe id= 'nbashotchart' src="http://shiny.swarthmore.edu:3838/hhan3/NBAShotChartApp/" style="border: none; width: 100%; height: 600px;"></iframe>
+
+											<p>
+												Moving forward, I would like to analyze the data that we compiled and create a machine learning model that can predict what a player's shot chart will be on a particular night.
+												I have read about existing projects that have been particular successful with these kind of predictions with deep neural nets.
+											</p>
+											<a target="_blank" href='https://github.com/hanksterhan/NBAShotChartApp'><strong> -- Link to Github -- </strong></a> <br />
+											<a target="_blank" href = "http://shiny.swarthmore.edu:3838/hhan3/NBAShotChartApp/"><strong> -- Link to App -- </strong></a>
+										</header>
+									</article>
+
 									<article class="item" id="featureimportance">
 										<header>
 											<h2 class="major"><strong>Analysis of Feature Selection Across Different Machine Learning Algorithms</strong></h2>
@@ -190,7 +215,7 @@
 												existing preprocessing techniques that are used for dimensionality reduction - Principle Component Analysis and Linear Discriminant Analysis. The linear transformation using PCA
 												is shown below.
 											</p>
-											<img src="images/education_PCA.png" class="image fit"/>
+											<img src="images/education_PCA.png" class="image"/>
 											<p>
 												Abstract
 											</p>
@@ -231,6 +256,45 @@
 										</header>
 									</article>
 
+									<article class="item" id="superpixels">
+										<header>
+											<h2 class="major"><strong>Superpixels!</strong></h2>
+											<p>
+												For my Parallel and Distributed Systems class, my partners and I chose to parallelize a superpixel segmentation algorithm called Simple Linear Iterative Clustering, or SLIC.
+												We compared the runtime and boundary recall of our parallel implementation to the sequential implementation and found some interesting results!
+												<br  />Below is an example of an image with superpixels boundaries superimposed onto it (shown in yellow)
+											</p>
+											<img src="images/mountain.png" class="image"/>
+
+											<p>
+												Abstract
+											</p>
+
+											<p>
+												Superpixelation involves grouping pixels in a way that captures some of the perceptual and intuitive meaning of an image. Superpixels are a useful tool for many computer vision problems including image segmentation and object recognition because superpixelation can be used as a preprocessing step that both reduces dimensionality and identifies more meaningful features. A good superpixel algorithm efficiently produces superpixels that respect object boundaries, are of approximately equal size, and are compact -- this means that superpixel edges fall along the edges of objects in the image, there is a roughly constant number of pixels per superpixel, and that each superpixel is relatively round. We implement a parallelized version of the simple linear iterative clustering (SLIC) algorithm for superpixelation with the goal of improving time efficiency and possibly scaling to larger image sizes. SLIC uses a $k$-means clustering approach which iteratively updates the assignment of pixels to superpixels based on the distance between the pixel and the superpixel centers. It is a good candidate algorithm for GPU parallelization because it has subparts that can computed independently by pixel or by superpixel. Although our results show that our parallelized implementation is 4-5 times slower than the sequential SLIC, we achieve nearly the same accuracy using metrics calculated using UC Berkeley's Segmentation Benchmarks - especially as the number of superpixels increase.
+											</p>
+
+											<a target="_blank" href="cs87-project-report.pdf">-- Link to paper --</a>
+
+										</header>
+									</article>
+
+									<article class="item" id="paces">
+										<header>
+											<h2 class="major"><strong>Paces Cafe</strong></h2>
+											<p>
+												Paces is a student-run cafe that is open from Sunday-Wednesday nights on Swarthmore College's campus. As a freshman, I joined the cafe as a prep chef. I was in charge of making guacamole and salsa
+												for the week as well as prepping vegatables and special dishes for the week. I was promoted to Kitchen Director at the end of freshman year and proceeded to revamp the menu
+												to provide healthier and tastier options, while also canning the dishes that had one-dimensional ingredients. I worked closely with the dining staff to conduct inventory and sales analysis
+												to further increase our profit margins and reduce waste. In the first 4 months of joining the team of directors, revenue has increased 400% and we have reached our nightly capacity of the cafe.
+												Swarthmore College is currently looking to rennovate a space to accommodate our sudden growth. I also interviewed, hired, and trained a team of 40 students and work closely with the staff and facilitate nightly operations
+												so that we can all have a good time as both students and employees. Below is a menu that we began the second semester with.
+											</p>
+											<img src="images/paces_menu.jpg" class="image fit"/>
+
+										</header>
+									</article>
+
 
 								</div>
 							</div>
@@ -248,7 +312,7 @@
 											</p>
 											<br />
 
-											<iframe src="https://open.spotify.com/embed?uri=spotify:track:0N5TmseieQKlk1ydbfjjZg&view=coverart"
+											<iframe id='spotify' src="https://open.spotify.com/embed?uri=spotify:track:0N5TmseieQKlk1ydbfjjZg&view=coverart"
 											width=80% height=80% frameborder="0" allowtransparency="true"></iframe>
 										</header>
 									</article>
