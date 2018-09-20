@@ -48,7 +48,9 @@
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
 								<li><a href="#fakebananas" id="fakebananas-link" class="skel-layers-ignoreHref"><span>Fake Bananas</span></a></li>
-								<li><a href="#nbascraper" id="nbascraper-link" class="skel-layers-ignoreHref"><span>NBA Statistics Scraper</span></a></li>
+                                <li><a href="#lotus" id="lotus-link" class="skel-layers-ignoreHref"><span>Lotus Journal</span></a></li>
+                                <li><a href="#crumb" id="crumb-link" class="skel-layers-ignoreHref"><span>Crumb Cafe</span></a></li>
+                                <li><a href="#nbascraper" id="nbascraper-link" class="skel-layers-ignoreHref"><span>NBA Statistics Scraper</span></a></li>
 								<li><a href="#nbashotchart" id="nbashotchart-link" class="skel-layers-ignoreHref"><span>NBA Shot Chart</span></a></li>
 								<li><a href="#featureimportance" id="featureimportance-link" class="skel-layers-ignoreHref"><span>Feature Importance Analysis</span></a></li>
 								<li><a href="#superpixels" id="superpixels-link" class="skel-layers-ignoreHref"><span>Superpixels!</span></a></li>
@@ -128,6 +130,50 @@
 											<img src="images/banana.png" alt="bananas"/>
 											<p>
 												<a target="_blank" href="https://github.com/likeaj6/FakeBananas"><strong>Fake Bananas</strong></a> is a fake news detector web app based on stance detection, natural language processing and machine learning.
+												At HackMIT 2017, Fake Bananas finished in the top 10 teams out of over 400 teams and 1250 hackers. Fake Bananas also
+												won Best AI/Hack for Social Good from Baidu and the prize for the Most Interesting Use of Data from Hudson River Trading. <br /><br />
+												Our fake news detection is based on the concept of <strong><i>stance detection.</i></strong> Fake news is tough to identify. Many 'facts' are
+												highly complex and difficult to check, or exist on a 'continuum of truth' or are compound sentences with act and fiction overlapping. The best way to
+												attack this problem is not through fact checking, but by comparing how reputable sources feel about a claim.
+											</p>
+											<img class="image fit" src="images/fakebananas.png"  />
+											<p>
+												How FakeBananas works:
+											</p>
+											<p>
+												<ol>
+													<li>
+														1. Users input a claim like <i>"The Afghanistan war was bad for the world"</i>
+													</li>
+													<li>
+														2. Our program will search the thousands of global and local news sources for their 'stance' on that topic.
+													</li>
+													<li>
+														3. We run sources through our Reputability Algorithm. If lots of reputable sources all agree with your claim, then it's probably true.
+													</li>
+													<li>
+														4. Then we cite our sources so our users can click through and read more about that topic!
+													</li>
+												</ol>
+												I was primarily in charge of web scraping for articles. Given a user URL or claim, I used Microsoft's Azure Cognitive and IBM's Natural Language Processing
+												to parse the article or claim and perform keyword extraction. I then used combinations of the keywords to collect up to a few thousand articles
+												from Event Registry's database to pass on to the machine learning model. Here I aired on the side of collecting more rather than fewer articles
+												because the machine learning will accurately determine relevancy further in the pipeline. <br />
+											</p>
+											<p>
+												Moving forward, we hope to launch a public facing web application and potentially even a browser plug-in that can detect
+												news articles and display what our pipeline returns.
+											</p>
+											<a target="_blank" href="https://github.com/likeaj6/FakeBananas"><strong> -- Link to Github -- </strong></a>
+										</header>
+									</article>
+
+                                    <article class="item" id="lotus">
+										<header>
+											<a target="_blank" href="https://github.com/KastanDay/BananaExpress"><h2 class='major'><strong>Lotus Journal</strong></h2></a>
+											<img class="image fit" src="images/lotus_journal.png" alt="bananas"/>
+											<p>
+												<a target="_blank" href="https://github.com/KastanDay/BananaExpress"><strong>Lotus Journal</strong></a> is a self-writing journal
 												At HackMIT 2017, Fake Bananas finished in the top 10 teams out of over 400 teams and 1250 hackers. Fake Bananas also
 												won Best AI/Hack for Social Good from Baidu and the prize for the Most Interesting Use of Data from Hudson River Trading. <br /><br />
 												Our fake news detection is based on the concept of <strong><i>stance detection.</i></strong> Fake news is tough to identify. Many 'facts' are
