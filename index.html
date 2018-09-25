@@ -171,44 +171,39 @@
                                     <article class="item" id="lotus">
 										<header>
 											<a target="_blank" href="https://github.com/KastanDay/BananaExpress"><h2 class='major'><strong>Lotus Journal</strong></h2></a>
-											<img class="image fit" src="images/lotus_journal.png" alt="bananas"/>
 											<p>
 												<a target="_blank" href="https://github.com/KastanDay/BananaExpress"><strong>Lotus Journal</strong></a> is a self-writing journal
-												At HackMIT 2017, Fake Bananas finished in the top 10 teams out of over 400 teams and 1250 hackers. Fake Bananas also
-												won Best AI/Hack for Social Good from Baidu and the prize for the Most Interesting Use of Data from Hudson River Trading. <br /><br />
-												Our fake news detection is based on the concept of <strong><i>stance detection.</i></strong> Fake news is tough to identify. Many 'facts' are
-												highly complex and difficult to check, or exist on a 'continuum of truth' or are compound sentences with act and fiction overlapping. The best way to
-												attack this problem is not through fact checking, but by comparing how reputable sources feel about a claim.
+												At HackMIT 2018, Lotus Journal finished in the top 10 teams out of over 400 teams and 1250 hackers. Lotus Journal also won the Azure Champ prize from Microsoft and Most Interesting Use of Text-Based Machine Learning from Quora.
 											</p>
-											<img class="image fit" src="images/fakebananas.png"  />
+                                            <img class="image fit" src="images/lotus_journal.png" alt="bananas"/>
+
 											<p>
-												How FakeBananas works:
+												How Lotus Journal works:
 											</p>
 											<p>
 												<ol>
 													<li>
-														1. Users input a claim like <i>"The Afghanistan war was bad for the world"</i>
+														1. User pictures are uploaded into a journal entry</i>
 													</li>
 													<li>
-														2. Our program will search the thousands of global and local news sources for their 'stance' on that topic.
+														2. We use image2text libraries and metadata from the pictures to generate a caption of what is going on in the picture, and if provided, location and date.
 													</li>
 													<li>
-														3. We run sources through our Reputability Algorithm. If lots of reputable sources all agree with your claim, then it's probably true.
+														3. We use this information to generate headings and prompts. In the screenshot above, the user only provided the picture of a man climbing. Our algorithm was able to extract the activity, rock climbing, the location, Rumney, and time of day, morning. Based on this information, we were able to generate a heading and prompt.
 													</li>
 													<li>
-														4. Then we cite our sources so our users can click through and read more about that topic!
+														4. As users type, the text is fed to my algorithm in real time. My algorithm does keyword extraction and matches them against the corpus of previous journal entries. My algorithm looks for similar temporal, locational, and linguistic keywords.
 													</li>
+                                                    <li>
+                                                        5. This keyword information is then passed through my rule-based system to generate grammatically correct open-ended questions geared towards reflection. <br /> Example of generated question: "How was climbing today compared to 2 weeks ago in Wenatche, WA?"
+                                                    </li>
 												</ol>
-												I was primarily in charge of web scraping for articles. Given a user URL or claim, I used Microsoft's Azure Cognitive and IBM's Natural Language Processing
-												to parse the article or claim and perform keyword extraction. I then used combinations of the keywords to collect up to a few thousand articles
-												from Event Registry's database to pass on to the machine learning model. Here I aired on the side of collecting more rather than fewer articles
-												because the machine learning will accurately determine relevancy further in the pipeline. <br />
+												I was primarily in charge of the real time question generation based on user input. My algorithm does keyword extraction and matches them against the corpus of previous journal entries. My algorithm looks for similar temporal, locational, and linguistic keywords. This keyword information is then passed through my rule-based system to generate grammatically correct open-ended questions geared towards reflection. Question generation was particularly  difficult because if the keyword was an activity, for example, I would need to take into account the tense of the verb used. Climb, climbed, will climb, climbing, etc. all need to be handled independently and tense gathered from context. 
 											</p>
 											<p>
-												Moving forward, we hope to launch a public facing web application and potentially even a browser plug-in that can detect
-												news articles and display what our pipeline returns.
+												Moving forward, we hope to turn this into a startup. We want to incorporate numerous data streams as users are able to provide them, data streams like fitbit data, sleep data, fitness and nutrition data, moods, progress tracking from apps like duolingo, etc. Over time, there will be plenty of user data on which machine learning can be conducted to find relationships and correlations. As we gain expertise in wellbeing, suggestions can be made to provide users insights into their lives.
 											</p>
-											<a target="_blank" href="https://github.com/likeaj6/FakeBananas"><strong> -- Link to Github -- </strong></a>
+											<a target="_blank" href="https://github.com/KastanDay/BananaExpress"><strong> -- Link to Github -- </strong></a>
 										</header>
 									</article>
 
