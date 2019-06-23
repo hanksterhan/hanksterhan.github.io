@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Henry Han</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<meta property="og:url" content="https://henryshan.com" />
+		<meta property="og:title" content="Henry Han" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Computer Science and Statistics student at Swarthmore College." />
+		<meta name="description" content="Computer Science and Cognitive Science major at Swarthmore College." />
+		<meta property="og:image" content="images/penn_landing.jpg" />
+	</head>
+	<body>
+		<!-- Header -->
+			<div id="header">
+				<div class="top">
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avi.jpg" alt="" /></span>
+							<h1 id="title">Henry S Han</h1>
+							<p>Swarthmore College '20</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="index.html#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+								<li><a href="index.html" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+								<li><a href="#superpixels" id="superpixels-link" class="skel-layers-ignoreHref scrollzer-locked active"><span>Superpixels</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+								<li><iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:6dDv1g33LC4F6YxGnthZrf&size=detail&theme=dark"
+									width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></li>
+							</ul>
+						</nav>
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a target="_blank" href="https://twitter.com/hankster_han" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a target="_blank" href="https://facebook.com/hanksterhan" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a target="_blank" href="https://instagram.com/hanksterhan/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a target="_blank" href="https://github.com/hanksterhan" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a target="_blank" href="https://linkedin.com/in/henryshan/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro
+					<section id="top" class="one dark cover">
+						<div class="container">
+							<header>
+
+							</header>
+
+							<footer>
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+							</footer>
+
+						</div>
+					</section> -->
+
+					<!-- <div class="container">
+						<br />
+						<center>
+							<h2 class="major"><strong>Hi! I'm Henry</strong></h2>
+							<p><strong>Swarthmore College &nbsp;&bull;&nbsp; Sushi Chef &nbsp;&bull;&nbsp;
+								 PNW &nbsp;&bull;&nbsp; Musician &nbsp;&bull;&nbsp; Data Scientist</strong></p>
+						</center>
+                    </div> -->
+                    
+                <!-- New Portfolio -->
+                <section id="portfolio" class="two" >
+                    <div class="container">
+                        <header>
+                            <h2 class="major" id="superpixels"><strong>Superpixels</strong></h2>
+                        </header>
+
+                        <div class="row">
+                            <div class="12u 12u$(mobile)">
+                                <article class="item" id="superpixels">
+                                    <header>
+                                        <p>
+                                            For my Parallel and Distributed Systems class, my partners and I chose to parallelize a superpixel segmentation algorithm called Simple Linear Iterative Clustering, or SLIC.
+                                            We compared the runtime and boundary recall of our parallel implementation to the sequential implementation and found some interesting results!
+                                            <br  />Below is an example of an image with superpixels boundaries superimposed onto it (shown in yellow)
+                                        </p>
+                                        <img src="images/mountain.png" class="image"/>
+
+                                        <p>
+                                            Abstract
+                                        </p>
+
+                                        <p>
+                                            Superpixelation involves grouping pixels in a way that captures some of the perceptual and intuitive meaning of an image. Superpixels are a useful tool for many computer vision problems including image segmentation and object recognition because superpixelation can be used as a preprocessing step that both reduces dimensionality and identifies more meaningful features. A good superpixel algorithm efficiently produces superpixels that respect object boundaries, are of approximately equal size, and are compact -- this means that superpixel edges fall along the edges of objects in the image, there is a roughly constant number of pixels per superpixel, and that each superpixel is relatively round. We implement a parallelized version of the simple linear iterative clustering (SLIC) algorithm for superpixelation with the goal of improving time efficiency and possibly scaling to larger image sizes. SLIC uses a $k$-means clustering approach which iteratively updates the assignment of pixels to superpixels based on the distance between the pixel and the superpixel centers. It is a good candidate algorithm for GPU parallelization because it has subparts that can computed independently by pixel or by superpixel. Although our results show that our parallelized implementation is 4-5 times slower than the sequential SLIC, we achieve nearly the same accuracy using metrics calculated using UC Berkeley's Segmentation Benchmarks - especially as the number of superpixels increase.
+                                        </p>
+
+                                        <a target="_blank" href="cs87-project-report.pdf">-- Link to paper --</a>
+
+                                    </header>
+                                </article>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <header>
+                            <a href="#superpixels"><button >Back to Top</button></a>
+                            <a href="index.html"><button>Back to Porfolio</button></a>
+                    </header>
+
+                </section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<img src="images/about_me.jpg" alt="" class="image featured"/>
+
+							<p>
+								I am a computer science and math double major at Swarthmore College graduating in the Spring of 2020. <br /> I am also passionate in the topics of psychology,
+								neuroscience, and nutrition. I like to stay fit through basketball, tennis, hiking, and bodybuilding. I play many instruments, but mainly the piano and GuZheng.
+								My favorite pieces include Grades etudes de Paganini by Franz Liszt, all three of Rachmaninioff's Piano Concertos, and Chopin Scherzo No.3 in C Sharp Minor, Op.39.
+							</p>
+
+							<p>
+								On a journey to quench my thirst for knowledge
+							</p>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<!-- <div id="footer">
+
+			</div> -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
